@@ -13,9 +13,9 @@ matrix_first_example = np.array([
     [96, 92, 0, 0],
     [91, 87, 95, 0]])
 
-labels__first_example = ['A', 'B', 'C', 'D']
+labels_first_example = ['A', 'B', 'C', 'D']
 
-result = start_multi_upgma(matrix_first_example, labels__first_example, 0)
+result = start_multi_upgma(matrix_first_example, labels_first_example, 0)
 
 for res in result:
   print(res)
