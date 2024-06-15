@@ -7,15 +7,15 @@
 Алгоритм принимает на вход:
 - Нижнетреугольные матрицы
 ```py
-matrix_third_example = np.array([
+matrix_first_example = np.array([
     [0, 0, 0, 0],
     [96, 0, 0, 0],
     [96, 92, 0, 0],
     [91, 87, 95, 0]])
 
-labels_third_example = ['A', 'B', 'C', 'D']
+labels__first_example = ['A', 'B', 'C', 'D']
 
-result = start_multi_upgma(matrix_third_example, labels_third_example, 0)
+result = start_multi_upgma(matrix_first_example, labels__first_example, 0)
 
 for res in result:
   print(res)
@@ -30,9 +30,9 @@ matrix_second_example = np.array([
     [0, 0, 0, 95],
     [0, 0, 0, 0]])
 
-labels_third_example = ['A', 'B', 'C', 'D']
+labels_second_example = ['A', 'B', 'C', 'D']
 
-result = start_multi_upgma(matrix_third_example, labels_third_example, 0)
+result = start_multi_upgma(matrix_second_example, labels_second_example, 0)
 
 for res in result:
   print(res)
@@ -42,7 +42,7 @@ for res in result:
 ```
 - Полные матрицы
 ```py
-matrix_first_example = np.array([
+matrix_third_example = np.array([
     [0, 96, 96, 91],
     [96, 0, 92, 87],
     [96, 92, 0, 95],
@@ -69,14 +69,14 @@ import pandas as pd
 df = pd.read_csv('example_1.csv', sep=',')
 
 # Получение одномерного массива названий столбцов (первая строка файла)
-labels_fifths_example = df.columns[1:].to_numpy()
-fifths_example = np.array(labels_fifths_example)
+labels_fourth_example_raw = df.columns[1:].to_numpy()
+labels_fourth_example = np.array(labels_fourth_example_raw)
 
 # Получение двумерного массива чисел
-qwe = df.iloc[:, 1:].to_numpy(dtype=float)
-fifths_example = np.array(qwe, dtype=float)
+data = df.iloc[:, 1:].to_numpy(dtype=float)
+matrix_fourth_example = np.array(data, dtype=float)
 
-result = start_multi_upgma(fifths_example, labels_fifths_example, 1)
+result = start_multi_upgma(matrix_fourth_example, labels_fourth_example, 1)
 
 for res in result:
   print(res)
