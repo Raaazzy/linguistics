@@ -15,7 +15,7 @@ matrix_third_example = np.array([
 
 labels_third_example = ['A', 'B', 'C', 'D']
 
-result = start_multi_upgma(matrix_third_example, labels_third_example)
+result = start_multi_upgma(matrix_third_example, labels_third_example, 0)
 
 for res in result:
   print(res)
@@ -32,7 +32,7 @@ matrix_second_example = np.array([
 
 labels_third_example = ['A', 'B', 'C', 'D']
 
-result = start_multi_upgma(matrix_third_example, labels_third_example)
+result = start_multi_upgma(matrix_third_example, labels_third_example, 0)
 
 for res in result:
   print(res)
@@ -50,7 +50,7 @@ matrix_first_example = np.array([
 
 labels_third_example = ['A', 'B', 'C', 'D']
 
-result = start_multi_upgma(matrix_third_example, labels_third_example)
+result = start_multi_upgma(matrix_third_example, labels_third_example, 0)
 
 for res in result:
   print(res)
@@ -76,7 +76,7 @@ fifths_example = np.array(labels_fifths_example)
 qwe = df.iloc[:, 1:].to_numpy(dtype=float)
 fifths_example = np.array(qwe, dtype=float)
 
-result = start_multi_upgma(fifths_example, labels_fifths_example)
+result = start_multi_upgma(fifths_example, labels_fifths_example, 1)
 
 for res in result:
   print(res)
