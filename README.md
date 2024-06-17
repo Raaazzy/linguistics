@@ -15,7 +15,7 @@ matrix_first_example = np.array([
 
 labels_first_example = ['A', 'B', 'C', 'D']
 
-result = start_multi_upgma(matrix_first_example, labels_first_example, 0)
+result = start_multi_upgma(matrix_first_example, labels_first_example)
 
 for res in result:
   print(res)
@@ -50,7 +50,7 @@ matrix_third_example = np.array([
 
 labels_third_example = ['A', 'B', 'C', 'D']
 
-result = start_multi_upgma(matrix_third_example, labels_third_example, 0)
+result = start_multi_upgma(matrix_third_example, labels_third_example)
 
 for res in result:
   print(res)
@@ -76,7 +76,7 @@ labels_fourth_example = np.array(labels_fourth_example_raw)
 data = df.iloc[:, 1:].to_numpy(dtype=float)
 matrix_fourth_example = np.array(data, dtype=float)
 
-result = start_multi_upgma(matrix_fourth_example, labels_fourth_example, 1)
+result = start_multi_upgma(matrix_fourth_example, labels_fourth_example)
 
 for res in result:
   print(res)
